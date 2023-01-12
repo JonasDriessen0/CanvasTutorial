@@ -5,4 +5,13 @@ export class GameLogic
         this.game = game
     }
 
+    mouseMoved(event)
+    {
+        this.game.x = event.offsetX;
+        this.game.y = event.offsetY;
+    }
+    logic()
+    {
+
+    }
 }

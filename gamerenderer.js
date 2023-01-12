@@ -15,6 +15,7 @@ export class GameRenderer
 
 
         g.fillStyle = "#1eca07";
-        g.fillRect(0, 0, 10, 10);
+        let player = this.game.player;
+        g.fillRect(player.x, player.y, player.w, player.h);
     }    
 }
