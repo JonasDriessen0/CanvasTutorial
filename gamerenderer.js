@@ -9,7 +9,9 @@ export class GameRenderer
 
     loadImages()
     {
-        let sources
+        let sources = ["bucket.webp", "background.webp"]
+
+        for var i = 0; i < length; i++
     }
 
     render()
