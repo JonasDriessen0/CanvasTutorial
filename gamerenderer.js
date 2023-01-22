@@ -7,6 +7,11 @@ export class GameRenderer
         this.g = canvas.getContext("2d");
     }
 
+    loadImages()
+    {
+        let sources
+    }
+
     render()
     {
         let g = this.g;
