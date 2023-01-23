@@ -13,6 +13,10 @@ class Game
 
     init()
     {
+        this.renderer.loadImages();
+    }
+    startGame()
+    {
         let scope = this;
         this.renderer.canvas.addEventListener("mousemove", function(event) {scope.logic.mouseMoved(event); });
 
