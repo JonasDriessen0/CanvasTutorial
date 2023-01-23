@@ -9,7 +9,7 @@ export class GameRenderer
         this.g = canvas.getContext("2d");
         this.images = [];
 
-        this.playerIdle = new Rect(100, 100, 100, 100);
+        this.playerIdle = new Rect(0, 0, 100, 100);
     }
 
     loadImages()
@@ -42,6 +42,12 @@ export class GameRenderer
             pos.x, pos.y, pos.w, pos.h)
     }
 
+    renderBackground()
+    {
+        let background = document.getElementById("background")
+        this.g.drawImage(background, 0, 0);
+    }
+
     render()
     {
         let g = this.g;
@@ -50,8 +56,7 @@ export class GameRenderer
         g.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
 
 
-        g.fillStyle = "#1eca07";
-
+        this.renderBackground();
         this.renderSprite(this.images[1], this.game.player, this.playerIdle);
     }    
 }
