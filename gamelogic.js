@@ -19,10 +19,14 @@ export class GameLogic
     
     logic()
     {
+        this.game.steak.x = this.steakX;
+        this.game.steak.y = this.steakY;
         if (overlaps(this.game.player, this.game.steak) == true)
         {
             this.score += 1;
             console.log(this.score)
+            this.steakX = Math.random() * 1000;
+            this.steakY = 0;
         }
         if (overlaps(this.game.renderer.invis, this.game.steak) == true)
         {
@@ -33,7 +37,7 @@ export class GameLogic
 
     steakfall()
     {
-        this.steakY -= -10;
+        this.steakY -= -15;
     }
 
 }

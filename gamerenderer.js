@@ -58,15 +58,17 @@ export class GameRenderer
         this.g.strokeRect(1, 595, 1000, 10)
     }
 
+
     render()
     {
         let g = this.g;
 
         g.fillStyle = "#2e6ede";
         g.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
-
+        
 
         this.renderBackground();
+        this.g.fillText("Score:", 500, 900)
         this.renderSprite(this.images[1], this.game.player, this.playerIdle);
         this.renderSteak(this.images[2], this.game.steak, this.steakdle);
     }    
