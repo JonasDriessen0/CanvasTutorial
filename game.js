@@ -1,5 +1,5 @@
-import { GameRenderer } from "./gamerenderer.js";
 import { GameLogic } from "./gamelogic.js";
+import { GameRenderer } from "./gamerenderer.js";
 import { Rect } from "./rect.js";
 
 class Game
@@ -26,6 +26,7 @@ class Game
 
     doGameFrame()
     {
+        this.logic.steakfall();
         this.logic.logic();
         this.renderer.render();
     }

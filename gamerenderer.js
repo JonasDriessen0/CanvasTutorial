@@ -12,6 +12,7 @@ export class GameRenderer
         this.playerIdle = new Rect(0, 0, 100, 100);
 
         this.SteakIdle = new Rect(0, 0, 100, 100);
+        this.invis = new Rect(1, 595, 1000, 10)
     }
 
     loadImages()
@@ -41,13 +42,20 @@ export class GameRenderer
     renderSprite(img, pos)
     {
         this.g.drawImage(img,
-            pos.x, pos.y, pos.w, pos.h)
+            pos.x, pos.y, 60, 60)
+    }
+
+    renderSteak(img)
+    {
+        this.g.drawImage(img, this.game.logic.steakX, this.game.logic.steakY, 60, 60)
     }
 
     renderBackground()
     {
         let background = document.getElementById("background")
         this.g.drawImage(background, 0, 0);
+        this.g.strokeStyle = "Yellow"
+        this.g.strokeRect(1, 595, 1000, 10)
     }
 
     render()
@@ -60,6 +68,6 @@ export class GameRenderer
 
         this.renderBackground();
         this.renderSprite(this.images[1], this.game.player, this.playerIdle);
-        this.renderSprite(this.images[2], this.game.steak, this.steakdle);
+        this.renderSteak(this.images[2], this.game.steak, this.steakdle);
     }    
 }
