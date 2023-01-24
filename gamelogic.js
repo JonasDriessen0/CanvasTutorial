@@ -9,6 +9,7 @@ export class GameLogic
         this.steakY = 0;
         this.steakX = Math.random() * 1000;
         this.time = 2000
+        this.misses = 0;
     }
 
     mouseMoved(event)
@@ -32,6 +33,7 @@ export class GameLogic
         {
             this.steakX = Math.random() * 1000;
             this.steakY = 0;
+            this.misses += 1;
         }
     }
 

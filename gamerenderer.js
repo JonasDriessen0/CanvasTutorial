@@ -54,8 +54,6 @@ export class GameRenderer
     {
         let background = document.getElementById("background")
         this.g.drawImage(background, 0, 0);
-        this.g.strokeStyle = "Yellow"
-        this.g.strokeRect(1, 595, 1000, 10)
     }
 
 
@@ -68,7 +66,11 @@ export class GameRenderer
         
 
         this.renderBackground();
-        this.g.fillText("Score:", 500, 900)
+        this.g.font = "50px serif";
+        this.g.fillText("Score:", 800, 570)
+        this.g.fillText(this.game.logic.score, 940, 570)
+        this.g.fillText("Misses:", 10, 570)
+        this.g.fillText(this.game.logic.misses, 170, 570)
         this.renderSprite(this.images[1], this.game.player, this.playerIdle);
         this.renderSteak(this.images[2], this.game.steak, this.steakdle);
     }    
