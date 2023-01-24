@@ -9,6 +9,7 @@ class Game
         this.logic = new GameLogic(this);
         this.renderer = new GameRenderer(this);
         this.player = new Rect(0, 0, 24, 24);
+        this.steak = new Rect(100, 100, 24, 24);
     }
 
     init()

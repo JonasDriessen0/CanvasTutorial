@@ -10,11 +10,13 @@ export class GameRenderer
         this.images = [];
 
         this.playerIdle = new Rect(0, 0, 100, 100);
+
+        this.SteakIdle = new Rect(0, 0, 100, 100);
     }
 
     loadImages()
     {
-        let sources = ["background.webp", "bucket.webp"];
+        let sources = ["background.webp", "bucket.webp", "steak.webp"];
         let scope = this;
 
         let loaded = 0;
@@ -58,5 +60,6 @@ export class GameRenderer
 
         this.renderBackground();
         this.renderSprite(this.images[1], this.game.player, this.playerIdle);
+        this.renderSprite(this.images[2], this.game.steak, this.steakdle);
     }    
 }

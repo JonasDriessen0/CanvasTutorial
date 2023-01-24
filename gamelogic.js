@@ -1,3 +1,5 @@
+import { overlaps } from "./collisionmath.js";
+
 export class GameLogic
 {
     constructor(game)
@@ -13,6 +15,9 @@ export class GameLogic
     
     logic()
     {
-
+        if (overlaps(this.game.player, this.game.steak) == true)
+        {
+            console.log("aaaa")
+        }
     }
 }
